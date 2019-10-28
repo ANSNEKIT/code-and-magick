@@ -10,7 +10,6 @@ var $wizardEyes = $setupWindow.querySelector('.wizard-eyes');
 var $wizardEyesInp = $setupWindow.querySelector('input[name="eyes-color"]');
 var $wizardFireball = $setupWindow.querySelector('.setup-fireball-wrap');
 var $wizardFirebalInp = $setupWindow.querySelector('input[name="fireball-color"]');
-//var $setupSimilar = document.querySelector('.setup-similar');
 var $userNameInput = $setupWindow.querySelector('.setup-user-name');
 var $setupSimilarList = document.querySelector('.setup-similar-list');
 var $wizardTemplate = document.querySelector('#similar-wizard-template')
@@ -51,7 +50,6 @@ var customWizard = function (evt) {
   } else if (target.closest('.setup-fireball-wrap') === $wizardFireball) {
     var fbColor = fireballColor[getRandom(0, fireballColor.length)];
     $wizardFireball.style.backgroundColor = fbColor;
-    console.log(fbColor);
     $wizardFirebalInp.value = fbColor;
   }
 };
@@ -182,7 +180,6 @@ $userNameInput.addEventListener('focus', function () {
 $userNameInput.addEventListener('blur', function () {
   document.addEventListener('keydown', onPopupEscPress);
 });
-
 
 
 function renderWizard(wizard) {
